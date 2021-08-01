@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.navbar ul{
+    display: flex;
+    margin:0;
+    list-style-type: none;
+}
+.navbar ul li a{
+    font-size: 1.6rem;
+    padding:10px;
+    text-decoration: none;
+    color:#102a42;
+    border-bottom: 3px solid transparent;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.navbar ul li:nth-child(2){
+    margin:0 30px;
+}
+.active{
+    border-bottom: 3px solid rgb(36, 142, 228) !important;
+}

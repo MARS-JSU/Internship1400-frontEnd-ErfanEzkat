@@ -1,0 +1,8 @@
+export const ADD_INTERST = 'ADD_INTERST'
+export const REMOVE_INTEREST = 'REMOVE_INTERSET'
+
+export const ADD_NOT_INTERST = 'ADD_NOT_INTERST'
+export const REMOVE_NOT_INTEREST="REMOVE_NOT_INTEREST"
+
+export const ADD_CARD="ADD_CARD";
+export const REMOVE_CARD="REMOVE_CARD";
