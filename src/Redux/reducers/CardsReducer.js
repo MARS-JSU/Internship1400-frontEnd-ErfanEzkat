@@ -1,7 +1,9 @@
+import { intersection } from "lodash";
 import * as actions from "../actions/actionTypes";
-import { getFromLocalStorage } from './../../helpers/helpers';
+import { getFromLocalStorage,addToLocalStorage } from './../../helpers/helpers';
 let init=getFromLocalStorage('cards');
-if(init===null)
+if(init===null || init===[]){
+
  init = [
 	{
 		title: "Best Of Paris In 7 Days Tour",
@@ -47,6 +49,9 @@ Sunt deserunt pariatur velit fugiat et. Pariatur adipisicing tempor veniam elit 
 		dec: `Occaecat quis sit elit ipsum reprehenderit dolore consequat cillum magna consequat reprehenderit ad culpa. Id magna exercitation elit aliquip esse. Ad aliqua reprehenderit id exercitation ea veniam amet. Incididunt commodo dolor voluptate culpa Lorem nisi cillum consectetur id fugiat. Cillum ad amet minim deserunt adipisicing sunt eiusmod Lorem ut fugiat ad tempor voluptate anim. Cupidatat elit enim do sunt consectetur sit ipsum.`,
 	},
 ];
+
+init.forEach(item=>addToLocalStorage('cards',item));
+}
 
 const cardReducer = (state = init, action) => {
 	switch (action.type) {
